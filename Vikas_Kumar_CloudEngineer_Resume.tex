@@ -1,0 +1,194 @@
+%─────────────────────────────────────────────────────────────────────────────
+%  Vikas Kumar – Cloud Engineer Resume
+%─────────────────────────────────────────────────────────────────────────────
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, top=6mm, bottom=6mm, left=11mm, right=11mm]{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{mdframed}
+
+% ── Named colours – defined BOTH in lower and upper to survive xcolor tabularx ─
+\definecolor{myDark}{HTML}{1B3A5C}
+\definecolor{myAcc}{HTML}{2563EB}
+\definecolor{myMid}{HTML}{6B7280}
+\definecolor{myBody}{HTML}{1F2937}
+\definecolor{mySubt}{HTML}{BFD7FF}
+% uppercase aliases
+\colorlet{MYDARK}{myDark}
+\colorlet{MYACC}{myAcc}
+\colorlet{MYMID}{myMid}
+\colorlet{MYBODY}{myBody}
+\colorlet{MYSUBT}{mySubt}
+
+% ── Hyperlinks ────────────────────────────────────────────────────────────────
+\hypersetup{colorlinks=true, urlcolor=myAcc, linkcolor=myAcc}
+
+% ── Page style ────────────────────────────────────────────────────────────────
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ── Section styling ───────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\small\bfseries\color{myDark}\uppercase}
+  {}{0em}{}
+  [\vspace{-2pt}\textcolor{myAcc}{\rule{\linewidth}{1.2pt}}\vspace{2pt}]
+\titlespacing{\section}{0pt}{3pt}{2pt}
+
+% ── List settings ─────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=12pt, itemsep=0pt, parsep=0pt, topsep=1pt,
+  label=\textcolor{myAcc}{\textbullet}
+}
+
+% ── Job entry ─────────────────────────────────────────────────────────────────
+\newcommand{\jobtitle}[4]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{} X r @{}}
+    \textbf{\small\color{myBody}#1} & {\footnotesize\color{myMid}#4} \\
+    {\footnotesize\color{myAcc}\textit{#2 \textbar{} #3}} & \\
+  \end{tabularx}\vspace{1pt}%
+}
+
+% ── Project entry ─────────────────────────────────────────────────────────────
+\newcommand{\projentry}[3]{%
+  {\small\bfseries\color{myDark}#1}\\[-3pt]
+  {\footnotesize\color{myAcc}\textit{#2}}\\[-1pt]
+  {\footnotesize\color{myBody}#3}\par\vspace{2pt}%
+}
+
+%─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+%─────────────────────────────────────────────────────────────────────────────
+
+%══════════════════════════════════════════════════════════════════════════════
+%  HEADER
+%══════════════════════════════════════════════════════════════════════════════
+\begin{mdframed}[
+  backgroundcolor=myDark,
+  linewidth=0pt,
+  innertopmargin=6pt, innerbottommargin=6pt,
+  innerleftmargin=10pt, innerrightmargin=10pt,
+  skipabove=0pt, skipbelow=4pt,
+  roundcorner=4pt
+]
+  {\LARGE\bfseries\color{white} Vikas Kumar}\\[3pt]
+  {\small\color{mySubt} Cloud Engineer \textbar{} AWS \textbar{} React.js \textbar{} DevOps}\\[5pt]
+  {\footnotesize\color{white}
+    \faPhone\ 7014321349 \quad\textbar\quad
+    \faEnvelope\ 7014.vikas@gmail.com \quad\textbar\quad
+    \faMapMarker*\ Jaipur, Rajasthan \textbar{} Open to Relocate -- Bengaluru / Hyderabad / Pune
+  }\\[2pt]
+  {\footnotesize\color{white}
+    \faGithub\ \href{https://github.com/vikas-032}{github.com/vikas-032}
+    \quad\textbar\quad
+    \faLinkedin\ \href{https://linkedin.com/in/vikaskumar}{linkedin.com/in/vikaskumar}
+  }
+\end{mdframed}
+
+%══════════════════════════════════════════════════════════════════════════════
+%  PROFESSIONAL SUMMARY
+%══════════════════════════════════════════════════════════════════════════════
+\section{Professional Summary}
+{\small\color{myBody}
+Motivated Cloud \& Frontend Engineer with hands-on experience in AWS, React.js, TypeScript, and CI/CD
+pipelines. Demonstrated ability to manage large-scale operations and teams at Delhivery, combined with
+technical skills in full-stack development and cloud infrastructure. Completed certifications in Full Stack
+Development, React, and Project Management. Actively seeking a Cloud Engineer or DevOps role to apply
+technical skills and grow in a product-focused environment.}
+
+%══════════════════════════════════════════════════════════════════════════════
+%  TECHNICAL SKILLS  –– plain tabular, no colour in preamble
+%══════════════════════════════════════════════════════════════════════════════
+\section{Technical Skills}
+
+\renewcommand{\arraystretch}{1.1}
+\noindent\begin{tabularx}{\linewidth}{@{} p{36mm} X @{}}
+  {\footnotesize\bfseries\color{myDark}Cloud \& AWS}          & {\footnotesize\color{myBody}EC2 \textbullet{} S3 \textbullet{} CloudFront \textbullet{} Lambda \textbullet{} IAM \textbullet{} VPC \textbullet{} RDS \textbullet{} AWS Free Tier Projects} \\
+  {\footnotesize\bfseries\color{myDark}Frontend}              & {\footnotesize\color{myBody}React.js \textbullet{} TypeScript \textbullet{} JavaScript (ES6+) \textbullet{} HTML5 \textbullet{} CSS3 \textbullet{} REST APIs} \\
+  {\footnotesize\bfseries\color{myDark}DevOps \& Tools}       & {\footnotesize\color{myBody}Git \textbullet{} GitHub \textbullet{} CI/CD Pipelines \textbullet{} Docker (basics) \textbullet{} Linux \textbullet{} Bash Scripting} \\
+  {\footnotesize\bfseries\color{myDark}Backend \& Databases}  & {\footnotesize\color{myBody}Java \textbullet{} Node.js (basics) \textbullet{} SQL \textbullet{} Firebase} \\
+  {\footnotesize\bfseries\color{myDark}Testing}               & {\footnotesize\color{myBody}Manual Testing \textbullet{} Automation Testing \textbullet{} Selenium (basics) \textbullet{} JIRA} \\
+  {\footnotesize\bfseries\color{myDark}Soft Skills}           & {\footnotesize\color{myBody}Team Leadership (40+ members) \textbullet{} Operations Planning \textbullet{} Cost Management \textbullet{} Problem Solving} \\
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+%══════════════════════════════════════════════════════════════════════════════
+%  PROJECTS
+%══════════════════════════════════════════════════════════════════════════════
+\section{Projects}
+
+\projentry
+  {Community Event Hub -- Jaipur Heritage Platform}
+  {React.js \textbullet{} TypeScript \textbullet{} REST API \textbullet{} Firebase \textbar{}
+   \href{https://github.com/vikas-032/jaipur-heritage}{github.com/vikas-032/jaipur-heritage}}
+  {Full-stack community platform featuring local blogs, tourist listings, and food content for Jaipur.
+   Built responsive UI with React.js and TypeScript, integrated third-party APIs for location data,
+   and deployed on Firebase Hosting with mobile-first design.}
+
+\projentry
+  {AWS Static Website Deployment}
+  {AWS S3 \textbullet{} CloudFront \textbullet{} Route 53 \textbullet{} IAM \textbar{}
+   \href{https://github.com/vikas-032/aws-static-deploy}{github.com/vikas-032/aws-static-deploy}}
+  {Deployed a production-grade static website using S3 for storage, CloudFront as CDN, and Route 53
+   for custom domain routing. Configured IAM least-privilege policies and enabled HTTPS via ACM.}
+
+\projentry
+  {Student Registration System -- Automation Testing}
+  {Selenium \textbullet{} Java \textbullet{} TestNG \textbullet{} Manual Testing}
+  {Developed automated test cases for a Student Registration System using Selenium WebDriver and Java.
+   Covered functional, regression, and boundary-value scenarios with documented bug reports.}
+
+%══════════════════════════════════════════════════════════════════════════════
+%  WORK EXPERIENCE
+%══════════════════════════════════════════════════════════════════════════════
+\section{Work Experience}
+
+\jobtitle
+  {B2B / B2C Operations Executive}
+  {Delhivery Pvt. Ltd.}
+  {Chandigarh Tricity Region}
+  {Nov 2024 -- Dec 2025}
+
+\begin{itemize}
+  \item Managed end-to-end pickup operations for Tricity Chandigarh, overseeing 40+ team members and 15+ delivery vehicles.
+  \item Handled 15,000+ B2C shipment pickups per month, optimising route planning and manday utilisation to reduce costs.
+  \item Led manpower planning, scheduling, and performance tracking using internal logistics dashboards and tools.
+  \item Coordinated with cross-functional teams to resolve escalations and improve SLA adherence.
+\end{itemize}
+
+%══════════════════════════════════════════════════════════════════════════════
+%  CERTIFICATIONS
+%══════════════════════════════════════════════════════════════════════════════
+\section{Certifications}
+
+\renewcommand{\arraystretch}{1.1}
+\noindent\begin{tabularx}{\linewidth}{@{} p{78mm} X p{16mm} @{}}
+  {\footnotesize\color{myBody}Full Stack Development Course}                           & {\footnotesize\color{myAcc}Dice Academy, New Delhi}   & {\footnotesize\color{myMid}2023} \\
+  {\footnotesize\color{myBody}React Development Course}                                & {\footnotesize\color{myAcc}Dice Academy, New Delhi}   & {\footnotesize\color{myMid}2023} \\
+  {\footnotesize\color{myBody}Project Management}                                      & {\footnotesize\color{myAcc}Dice Institute, New Delhi} & {\footnotesize\color{myMid}2025} \\
+  {\footnotesize\color{myBody}AWS Certified Cloud Practitioner \textit{(In Progress)}} & {\footnotesize\color{myAcc}Amazon Web Services}       & {\footnotesize\color{myMid}2026} \\
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+%══════════════════════════════════════════════════════════════════════════════
+%  EDUCATION
+%══════════════════════════════════════════════════════════════════════════════
+\section{Education}
+
+\noindent\begin{tabularx}{\linewidth}{@{} X r @{}}
+  \textbf{\small\color{myBody}Bachelor of Computer Applications (BCA)} & {\footnotesize\color{myMid}2021 -- 2024} \\
+  {\footnotesize\color{myAcc}\textit{Parishkar College \textbar{} University of Rajasthan \textbar{} GPA: 7.5}} & \\
+\end{tabularx}
+
+\end{document}
